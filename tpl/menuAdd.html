@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メニュー追加</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>{{ heading }}</h1>
+        </header>
+        <main>
+            <select v-model="selected">
+                <option disabled value="">曜日を選択してください</option>
+                <option v-for="option in options" v-bind:value="option.day" v-bind:key="option.id">
+                    {{ option.day }}
+                </option>
+            </select>
+            <p>{{ selected }}</p>
+            </select>
+            <button>{{ text }}}</button>
+        </main>
+    </div>
+
+    <!-- [js読み込み] -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="../js/menuAdd.js"></script>
+</body>
+
+</html>
